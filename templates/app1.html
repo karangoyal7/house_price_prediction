@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Bangalore Home Price Prediction</title>
+</head>
+<body style="background-image:url('../bg.jpg');">
+
+<div id="container">
+    <form action="/result" method="POST">
+      <div class="form-group col-md-6">
+        <label for="area">Area (in square feet)</label>
+        <input type="text" class="form-control" id="area" name="area">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="bath">Bathrooms</label>
+        <input type="text" class="form-control" id="bath" name="bath">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="bhk">BHK</label>
+        <input type="text" class="form-control" id="bhk" name="bhk">
+      </div>
+      <div class="form-group col-md-6">
+         <label for="loc">Location</label>
+         <select class="custom-select mr-sm-2" id="loc" name="loc">
+             {% for loc in x%}
+             <option>{{loc}}</option>
+             {%endfor %}
+         </select>
+      </div>
+        <br>
+      <div class="form-group col-md-6">
+          <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+        <br>
+        <div class="form-group col-md-6">
+            Estimated Price : {{prediction}}
+        </div>
+    </form>
+<!--      <form action="/result" method="POST">-->
+<!--        <label for="area">Area</label>-->
+<!--        <input type="text" id="area" name="area">-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <label for="bath">Bathrooms</label>-->
+<!--        <input type="text" id="bath" name="bath">-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <label for="bhk">BHK</label>-->
+<!--        <input type="text" id="bhk" name="bhk">-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <label for="loc">Location</label>-->
+<!--        <input type="text" id="loc" name="loc">-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <input type="submit" value="Submit">-->
+<!--        <br>-->
+<!--      </form>-->
+<!--    <br>-->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>
