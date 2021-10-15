@@ -14,6 +14,8 @@ Output:
 
 Flowchart of Methodology:
 
+![](flowchart.PNG)
+
 Live link:
 
 https://houseprice-bengaluru.herokuapp.com/
